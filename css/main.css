@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline;
+  color: black;
+}
+
+header {
+  width: 100%;
+  height: 140px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+header .header-icons-container {
+  width: 100%;
+  height: 50px;
+  display: grid;
+  background-color: #47CFAC;
+}
+
+header .header-icons-container .icons {
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-items: flex-end;
+  justify-content: space-between;
+  justify-self: end;
+  align-items: center;
+  margin-right: 50px;
+}
+
+header .icons span {
+  color: white;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90px;
+}
+
+nav .nav-logo-container {
+  margin-left: 50px;
+}
+
+nav .profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+nav .profile-link a {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+nav .nav-logo-container img {
+  width: 200px;
+  margin-top: 10px;
+}
+
+.home-main {
+  background-image: url('../assets/Cover.png');
+  background-position: top;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+}
+
+.home-main h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2.8rem;
+  max-width: 900px;
+  letter-spacing: 10px;
+
+}
+
+.home-main button {
+  background-color: #47CFAC;
+  padding: 16px 24px;
+  border: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
