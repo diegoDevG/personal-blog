@@ -3,18 +3,28 @@
 body {
   margin: 0;
   padding: 0;
-  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  background-color: white;
 }
 
 a {
   text-decoration: none;
   display: inline;
   color: black;
+}
+
+img {
+  width: 100%;
+}
+
+.grid-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 header {
@@ -52,15 +62,10 @@ nav {
   height: 90px;
 }
 
-nav .nav-logo-container {
-  margin-left: 50px;
-}
-
 nav .profile-link {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 50px;
 }
 
 nav .profile-link a {
@@ -73,6 +78,8 @@ nav .nav-logo-container img {
   margin-top: 10px;
 }
 
+
+
 .home-main {
   background-image: url('../assets/Cover.png');
   background-position: top;
@@ -83,11 +90,11 @@ nav .nav-logo-container img {
   align-items: center;
   color: white;
   text-align: center;
-
+  position: fixed;
+  width: 100%;
 }
 
 .home-main h1 {
-  font-family: 'Roboto Mono', monospace;
   font-size: 2.8rem;
   max-width: 900px;
   letter-spacing: 10px;
@@ -98,7 +105,88 @@ nav .nav-logo-container img {
   background-color: #47CFAC;
   padding: 16px 24px;
   border: none;
-  font-family: 'Roboto Mono', monospace;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.blogs-main {
+  display: grid;
+}
+
+.blogs-main-featured-container {
+  padding: 0 3%;
+  background-color: #E6E9ED;
+  padding-bottom: 50px;
+}
+
+.blogs-main-featured {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr;
+}
+
+.blogs-main-featured-img {
+  grid-column: 1;
+}
+
+.blogs-main-featured-img img {
+  width: 90%;
+}
+
+.blogs-main-featured-info {
+  grid-column: 2;
+}
+
+.blogs-main-featured-info p {
+  padding-bottom: 35px;
+}
+
+.blogs-posts-container {
+  padding: 0 50px 40px;
+}
+
+.blogs-posts-container h3 {
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid #CDD2DA;
+  text-align: center;
+  padding: 16px 50px;
+}
+
+.blogs-post-articles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+}
+
+.blogs-main a {
+  border: 2px solid #47cfac;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.blogs-posts-container article h3 {
+  padding: 0;
+  text-align: left;
+  border: none;
+}
+
+article p {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 200px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  background-color: #22272D;
+  border-top: 25px solid #47CFAC;
+  color: white;
 }
